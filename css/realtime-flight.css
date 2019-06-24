@@ -1,0 +1,268 @@
+::selection {
+  color: #fff; 
+  background: #fce804;
+}
+
+main {padding-top: 20px;}
+
+/*.top-content*/
+.top-content {width: 100%; height: 150px; border-bottom: 1px solid #009afa; background: url(../img/realtime-flight/bg_top_content.png) no-repeat bottom center / contain; color: #424242}
+.top-content > div {position: relative; width: 100%; height: 100%; text-align: center;}
+.top-content > div h2, .top-content > div p {position: absolute; width: 100%; left: 50%; transform: translateX(-50%); font-size: 22px;}
+.top-content > div h2 {top: 45%;}
+.top-content > div p {top: 65%; font-size: 12px; color: #7a7a7a;}
+
+/*.content-.content-tab*/
+.content {margin: 20px 0 40px;}
+.content .content-tab {width: 100%; height: 380px; margin: 0 auto;}
+.content .content-tab > .outline {height: auto;}
+.tab {overflow: hidden; width: 95%; margin: 0 auto;}
+.tab a {float: left; width: 50%; height: 100%; margin-top: 10px; font-size: 16px; line-height: 40px; text-align: center; background: #d8d8d8; border: 1px solid #d8d8d8; border-bottom: none;}
+.tab a.on {height: 50px; line-height: 50px; color: #009afa; margin-top: 0; background-color: #fff;}
+.tab i {margin-right: 15px;}
+.content-tab > .outline {width: 100%; height: 170px; padding: 20px 20px 20px;}
+.outline > p {font-size: 14px; line-height: 1.4; color: #424242;}
+
+/*sarch-form*/
+.search {position: relative; width: 100%; overflow: hidden;}
+.search legend {text-indent: -9999px;}
+.hidden-label {position: absolute; left: 9999999px; font-size: 0; line-height: 0;}
+.search select, .search input {display: block; float: left; width: 50%; height: 50px; padding: 5px 10px; font-size: 16px; font-weight: 300; border: 1px solid rgba(0, 154, 250, 0.3); color: #7a7a7a;}
+.search select:nth-of-type(1) {width: 100%; background-position: 96.5%;}
+.search select:nth-of-type(3) {margin-left: 0;}
+.search select:nth-of-type(3), .search select:nth-of-type(4) {width: 50%;}
+.search .flight-name {width: 100%;}
+.search .datepicker-here {width: 50%;}
+.search .fa-calendar-alt {position: absolute; display: inline-block; width: 12px; height: 12px; left: 42%; top: 83px;}
+.search .fa-search {position: absolute; bottom: 15px; right: 14px;}
+.search i {color: rgba(0, 154, 250, 0.7);}
+
+/* form border collepse */
+.search .select-terminal,
+.search .flight-date,
+.search .select-time,
+.search .select-arrive,
+.search .select-airline {border-bottom: none;}
+.search .flight-date,
+.search .select-arrive {border-right: none;}
+
+/*.content-.flight-list*/
+.flight-list {width: 100%; margin: 0 auto; padding: 0 20px;}
+.flight-list .update {overflow: hidden; width: 100%;}
+.update a {float: left; padding: 5px 5px; font-size: 12px; color: #424242; border: 1px solid #d8d8d8; border-radius: 50%; margin-right: 10px;}
+.update p {color: #424242; margin-top: 10px; font-size: 12px;}
+
+.inner-flight-list {overflow: hidden; width: 100%; margin-top: 10px;}
+.inner-flight-list > li {overflow: hidden; width: 100%; transition: all 0.3s;}
+
+/* 리스트헤더 */
+.inner-flight-list .list-header {height: 60px; color: #fff; border: none; background-color: #009afa; display: none;}
+.inner-flight-list .list-header li {float: left; text-align: center; line-height: 60px;}
+
+/* 리스트 */
+.inner-flight-list .flight-info {display: block; width: 100%; margin-top: 10px; padding: 0 3%; border: 1px solid #d8d8d8; border-top: 3px solid #009afa;}
+.inner-flight-list .flight-info ul {width: 100%; overflow: hidden;}
+.inner-flight-list .flight-info ul li {float: left; text-align: center; line-height: 50px;}
+
+/* 리스트 width */
+.flight-info ul li {width: 50%;/* padding: 0 4%;*/}
+.flight-info ul li:nth-child(1) {text-align: left;}
+.flight-info ul li:nth-child(2) {text-align: right;}
+.flight-info ul li:nth-child(3) {width: 40%; text-align: left;}
+.flight-info ul li:nth-child(4) {width: 20%;}
+.flight-info ul li:nth-child(5),
+.flight-info ul li:nth-child(6) {width: 33.3333%; display: none;}
+.flight-info ul li:nth-child(7) {width: 40%; text-align: right;}
+
+/* 리스트 border, bg */
+.inner-flight-list > li:nth-child(1) {background-color: #009afa;}
+.inner-flight-list > li:nth-child(2) {border-top: 1px solid #d8d8d8;}
+
+/* .inner-flight-list > li.on a {background: rgba(66, 66, 66, 0.8); color: #fff;} */
+.inner-flight-list > .flight-info-box.on .flight-info {background: rgba(66, 66, 66, 0.6); color: #fff;}
+
+/* 리스트 status (출발현황 컬러)*/
+.status:after {content: ''; display: inline-block; width: 10px; height: 10px; margin-left: 10px; border-radius: 50%; background: #30BA40;}
+li:nth-child(2) .status:after {background: #30BA40;}
+li:nth-child(3) .status:after {background: #FF6A19;}
+li:nth-child(4) .status:after {background: #F7CB2A;}
+li:nth-child(5) .status:after {background: #5165E8;}
+li:nth-child(6) .status:after {background: #5165E8;}
+li:nth-child(7) .status:after {background: #DE1D10;}
+li:nth-child(8) .status:after {background: #5165E8;}
+li:nth-child(9) .status:after {background: #5165E8;}
+li:nth-child(10) .status:after {background: #5165E8;}
+
+/* 항공편 상세정보 */
+.flight-detail {width: 100%; height: 0; padding: 0 2%; font-size: 14px; background: url(../img/realtime-flight/bg_detail.png) no-repeat center / auto 570px; color: #fff; overflow: hidden;}
+.flight-detail-box {width: 100%; height: 390px}
+
+.departure, .arrive {width: 100%;}
+
+.inner-flight-info {text-align: center;}
+.inner-flight-info h3 {height: 40px; line-height: 40px; font-weight: 300;}
+.info-airline, .info-detail {height: 50px; margin-bottom: 20px;}
+.info-airline .airport, .info-airline .city, .info-airline .weather {float: left; text-align: center; line-height: 40px;  font-weight: 300;}
+.info-airline .airport {width: 30%; line-height: 1.4; letter-spacing: -1px;}
+.info-airline .city {width: 40%; font-size: 20px; color: #fce804; font-weight: 500;}
+.info-airline .weather {width: 30%;}
+.info-airline .weather i {margin-left: 5px; font-size: 20px;}
+
+.inner-flight-info .info-detail ul {overflow: hidden; width: 100%;}
+.inner-flight-info .info-detail ul li {float: left; text-align: center;}
+.info-detail ul li:nth-child(1) {width: 30%; letter-spacing: -1px;}
+.info-detail ul li:nth-child(2) {width: 25%;}
+.info-detail ul li:nth-child(3) {width: 20%;}
+.info-detail ul li:nth-child(4) {width: 25%;}
+.info-detail span, .info-detail b {display: block; margin-bottom: 7px; font-weight: 300;}
+
+.arrive .info-detail li:nth-child(1) {width: 30%;}
+.arrive .info-detail li:nth-child(2) {float: right; width: 30%;}
+
+/* 시차 */
+.center {width: 100%; height: 40px; text-align: center; overflow: hidden; line-height: 40px;}
+.center p {float: left; width: 30%; padding: 0 10px; font-size: 14px; font-weight: 300; margin: 0 auto;}
+.center:before, .center:after {float: left; content: ''; display: inline-block; width: 30%; margin: 20px 2%; border: 0.5px solid rgba(239, 239, 239, 0.2);}
+
+/* 리스트 더보기 */
+.btn-more {display: none; width: 150px; height: 50px; margin: 20px auto 0; padding: 10px 15px; font-size: 20px; color: #000;}
+
+
+/* form요소 focus 테두리 제거*/
+input:focus, select:focus {
+	outline: none;
+}
+
+/* input/select ios 대응*/
+input {
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
+select {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	-moz-appearance: none;
+	appearance: none;
+	
+	background: url('../img/realtime-flight/select-arrow.png') no-repeat 93% 50% / 14px;
+}
+select::-ms-expand {display:none} /* IE:select 화살표 숨기기*/
+
+
+/* tablet - iPad */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+	/*search*/
+	.search .fa-calendar-alt {left: 46%; top: 82px;}
+	
+	/* 항공편 디테일 */
+	.inner-flight-info h3 {font-size: 16px;}
+	.info-airline .airport,
+	.info-airline .weather {font-size: 16px;}
+	.inner-flight-info .info-detail ul li {font-size: 16px;}
+	.info-detail ul li:nth-child(2) {width: 22%;}
+
+	/* 시차 */
+	.center {width: 100%; height: 40px; text-align: center; overflow: hidden; line-height: 40px;}
+	.center p {float: left; width: 30%; padding: 0 10px; font-size: 14px; font-weight: 300; margin: 0 auto;}
+	.center:before,
+	.center:after {float: left; content: ''; display: inline-block; width: 30%; margin: 20px 2%; border: 0.5px solid rgba(239, 239, 239, 0.2);}
+
+	/* select 화살표 위치 */
+	select {background-position: 95.6%;}
+	.search select:nth-of-type(1) {background-position: 97.9%;}
+}
+
+/* PC - 1280px 이상 */
+@media screen and (min-width: 1280px) {
+	#wrap {box-sizing: border-box;}
+	.top-content {height: 270px;}
+	.top-content > div h2 {top: 45%; font-size: 32px; font-weight: 700;}
+	.top-content > div p {top: 60%; font-size: 14px;}
+
+	/*.content-tab*/
+	.tab {width: 1280px;}
+	.content .content-tab {height: 240px;}
+	.content-tab > .outline {width: 1280px; height: 170px; margin: 0 auto; border: 1px solid #d8d8d8; border-top: none;}
+	
+	/*search-form*/
+	.search select, .search input {width: 150px; padding: 5px 10px;}
+	.search select:nth-of-type(1) {width: 150px;}
+	.search select:nth-of-type(3) {margin-left: 18px;}
+	.search select:nth-of-type(3),
+	.search select:nth-of-type(4) {width: 200px;}
+	.search .flight-name {width: 300px; }
+	.search .datepicker-here {width: 200px; margin-left: 18px;}
+	.search .fa-calendar-alt {left: 337px; top: 32px;}
+	
+	/* border collepse */
+	.search .select-terminal,
+	.search .flight-date,
+	.search .select-time,
+	.search .select-arrive,
+	.search .select-airline {border-bottom: 1px solid rgba(0, 154, 250, 0.3);}
+	.search .flight-date,
+	.search .select-arrive,
+	.search .select-airline {border-right: none;}
+	
+	/*update*/
+	.update p {font-size: 16px; margin-top: 5px;}
+
+	/*.content-.flight-list*/
+	.flight-list {width: 1280px;}
+	.inner-flight-list .list-header {display: block;}
+	.inner-flight-list .list-header ul li {text-align: center;}
+
+	/* 항공편 리스트 */
+
+	.inner-flight-list .flight-info {padding: 0;}
+	.inner-flight-list .flight-info ul li {height: 80px; line-height: 80px;}
+	
+	.inner-flight-list li ul li {height: 80px; padding: 0;}
+	.inner-flight-list li ul li:nth-child(1),
+	.inner-flight-list li ul li:nth-child(2) {width: 150px; text-align: center;}
+	.inner-flight-list li ul li:nth-child(3) {width: 320px; text-align: center;}
+	.inner-flight-list li ul li:nth-child(4) {width: 130px;}
+	.inner-flight-list li ul li:nth-child(5) {width: 200px; display: block;}
+	.inner-flight-list li ul li:nth-child(6) {width: 100px; display: block;}
+	.inner-flight-list li ul li:nth-child(7) {width: 188px;}
+	.flight-info .status {padding-right: 50px;}
+	
+	/* 항공편 리스트 border, bg*/
+	.inner-flight-list .flight-info {height: 100%; border: none; margin-top: 0;}
+	.inner-flight-list > li {border-bottom: 1px dashed #d8d8d8;}
+	.inner-flight-list > li:nth-child(odd) {background-color: #f7f7f7;}
+	.inner-flight-list > li:nth-child(1) {background-color: #009afa;}
+	.inner-flight-list > li:last-child {border-bottom: 1px solid #d8d8d8;}
+	
+	/* 항공편 상세 */
+	.flight-detail {height: 0; background-size: cover; padding: 0; overflow: hidden;}
+	.flight-detail .flight-detail-box {height: 270px;}
+	.flight-detail .flight-detail-box > div {float: left; height: 100%;}
+	.flight-detail .inner-flight-info {width: 45%;}
+	.inner-flight-info h3 {height: 50px; line-height: 50px; font-size: 18px; margin-top: 3%;}
+	.info-airline .airport, .info-airline .city, .info-airline .weather {height: 100%; font-weight: 300; line-height: 60px;}
+	.info-airline, .info-detail {height: 70px; margin-bottom: 30px;}
+	.info-airline .airport {width: 25%; font-size: 18px; line-height: 1.7;}
+	.info-airline .city {width: 50%; font-size: 28px;}
+	.info-airline .weather {width: 25%; font-size: 18px;}
+	.info-airline .weather i {font-size: 24px;}
+	
+	.flight-detail .inner-flight-info .info-detail ul li {padding: 0; width: 25%; font-size: 18px; font-weight: 300;}
+	.info-detail span {margin-bottom: 10px;}
+	.info-detail b {font-weight: 300;}
+	
+	/* 시차 */
+	.center {width: 10%;}
+	.center p {float: none; width: 100%;}
+	.center:before, .center:after {float: none; display: block; width: 0; height: 35%; margin: 10% auto;}
+	
+	/* select 화살표 위치 */
+	.search select:nth-of-type(1) {background-position: 94%;}
+}
+
+
+
+
+
+
