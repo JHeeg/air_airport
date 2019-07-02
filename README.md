@@ -5,7 +5,7 @@
 작업기간 : 약 1개월
 
 기여도 : 기획 25%, 디자인 (담당페이지 90%), 퍼블리싱 (담당페이지 100%)<br>
-담당 페이지 : 운행현황 - 실시간운행현황 (realtime-flight.html)
+담당 페이지 : 운행현황 - 실시간운행현황 (https://jheeg.github.io/air_airport/realtime-flight.html)
 
 HTML / CSS / jQuery <br>
 photoshop / illustrator / bracket / github
